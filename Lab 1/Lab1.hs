@@ -95,5 +95,20 @@
 -- main :: IO()
 -- main = putStrLn(show(qsort[2,10,2,3,4,5,9,3]))
 
+-- Activity 7: Alternative Solution
+
+-- insert :: Int -> [Int] -> [Int] -- Take an integer into a list of integers and return a list of integers
+-- insert e [] = [e]
+-- insert e (x:xs)
+-- 	| e<=x = e : x : xs
+-- 	| otherwise = x : insert e xs
+
+-- sort :: [Int] -> [Int]
+-- sort [] = []
+-- sort (x:xs) = insert x (sort xs)
+
+-- main :: IO()
+-- main = putStrLn(show(sort[2,10,2,3,4,5,9,3]))
+
 -- Activity 8 Use a search engine to locate the Haskell Standard Prelude of predefined functions and operators. How many of the functions that you have defined in this laboratory could be re-expressed in terms of Standard Prelude ones?
 -- Most of it has inbuilt functions 
